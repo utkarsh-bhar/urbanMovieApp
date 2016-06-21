@@ -1,0 +1,17 @@
+<ion-view view-title="MovieLists">
+    <ion-content >
+        <ion-list>
+            <ion-item ng-repeat="mov in movies | filter: query" href="#/app/playlists/{{mov.id}}" >
+                <div class="list">
+                    {{mov.title}}
+
+                </div>
+
+            </ion-item>
+            <ion-item ng-controller="PlaylistsCtrl">
+                <button class="button button-positive" style="float:right" ng-click="shareList()">
+                    share
+                </button>
+            </ion-list>
+        </ion-content>
+    </ion-view>
