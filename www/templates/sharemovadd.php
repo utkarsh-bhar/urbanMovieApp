@@ -6,7 +6,7 @@
             <button class="button button-clear" ng-click="closeMovieModal()">Close</button>
         </div>
     </ion-header-bar>
-    <ion-content ng-controller="movieController">
+    <ion-content ng-controller="shareController">
         <form ng-submit="pushData(inData)" action="" method="get">
             <div class="list">
                 <label class="item item-input">
@@ -28,7 +28,7 @@
                     <a href="" ng-click="removeData(data)">Remove</a>
                 </div>
             </div>
-        </form><form action="#/app/playlists">
+        </form><form action="includes/share_json2.php">
             <button  class="button button-block button-positive" type="submit"  >Add Movie</button>
         </form>
 

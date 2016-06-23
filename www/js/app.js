@@ -23,7 +23,7 @@ templatesUrl:'templates/menu.html'
 })
 .when('/browse',{
 templatesUrl:'templates/browse.html',
-controller:'MovieCtrol'
+controller:'Movitrol'
 })
 
 })*/
@@ -37,7 +37,14 @@ controller:'MovieCtrol'
         templateUrl: 'templates/menu.php',
         controller: 'AppCtrl'
     })
-
+ .state('app.home', {
+        url: '/home',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/home.html',
+            }
+        }
+    })
 
     .state('app.search', {
         url: '/search',
@@ -49,14 +56,7 @@ controller:'MovieCtrol'
         }
     })
 
-    .state('app.home', {
-        url: '/home',
-        views: {
-            'menuContent': {
-                templatesUrl: 'templates/home.html'
-            }
-        }
-    })
+   
     .state('app.browse', {
         url: '/browse',
 
@@ -73,7 +73,7 @@ controller:'MovieCtrol'
         url: '/playlists',
         views: {
             'menuContent': {
-                templateUrl: 'templates/playlists.html',
+                templateUrl: 'templates/playlists.php',
                 controller: 'PlaylistsCtrl'
             }
         }
@@ -83,7 +83,7 @@ controller:'MovieCtrol'
         url: '/playlists/:mov',
         views: {
             'menuContent': {
-                templateUrl: 'templates/movielist11.html',
+                templateUrl: 'templates/movielist11.php',
                 controller: 'test'
             }
         }
